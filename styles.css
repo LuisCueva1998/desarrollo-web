@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #4a90e2;
+    --primary-hover: #357abd;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-primary: #2c3e50;
+    --text-secondary: #6c757d;
+    --success-bg: #28a745;
+    --error-bg: #dc3545;
+    --border-color: #e1e1e1;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Navbar y Logo */
+.navbar {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    padding: 15px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.animated-logo {
+    width: 28px;
+    height: 28px;
+}
+
+.logo-circle {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawCircle 1.5s ease forwards;
+}
+
+.logo-shield {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawShield 1.5s ease forwards 0.3s;
+}
+
+.logo-check {
+    stroke-dasharray: 30;
+    stroke-dashoffset: 30;
+    animation: drawCheck 0.8s ease forwards 1.2s;
+}
+
+@keyframes drawCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawShield {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawCheck {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.brand-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Password Input Group */
+.password-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input {
+    padding-right: 45px !important;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--primary-color);
+}
+
+/* Resto de los estilos existentes */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out
