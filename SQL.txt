@@ -1,4 +1,4 @@
-CREATE DATABASE sistema_auth CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE sistema_autenticar CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE sistema_autenticar;
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
